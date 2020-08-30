@@ -15,20 +15,25 @@ def sort_array_desc(num)
 end
 
 
+def sort_array_char_count(arr)
+  arr.sort {|a,b| a.length <=> b.length}
+end
+
+
 def swap_elements(arr)
-  temp1 = arr[1]
-  temp2 = arr[2]
-  arr[1] = temp2
-  arr[2] = temp1
+  num1 = arr[1]
+  num2 = arr[2]
+  arr[1] = num2
+  arr[2] = num1
   arr
 end
 
 
 def adv_swap_elements(arr, index, index_des)
-  temp1 = arr[index]
-  temp2 = arr[index_des]
-  arr[index] = temp2
-  arr[index_des] = temp1
+  num1 = arr[index]
+  num2 = arr[index_des]
+  arr[index] = num2
+  arr[index_des] = num1
   arr
 end
 
