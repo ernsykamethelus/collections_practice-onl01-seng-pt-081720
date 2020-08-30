@@ -47,14 +47,19 @@ def kesha_maker(arr)
   end
 end
 
+
 def find_a(arr)
   arr.select {|str| str.start_with?("a")}
 end
+
 
 def sum_array(arr)
   arr.inject {|sum, num| sum + num}
 end
 
+
 def add_s(arr)
   arr.each {|str| str << "s" unless str == arr[1]}
 end
+
+
