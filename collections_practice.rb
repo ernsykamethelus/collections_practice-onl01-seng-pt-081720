@@ -14,23 +14,47 @@ def sort_array_desc(num)
   end
 end
 
-name= ["dogs", "cat", "Horses"]
 
-def sort_array_char_count(name)
-  name.sort!
-  end
-
-names= ["blake", "ashley", "scott"]
-
-def swap_elements(names)
-  names.sort do |a,b|
-    b<=>a
-  end
+def swap_elements(arr)
+  temp1 = arr[1]
+  temp2 = arr[2]
+  arr[1] = temp2
+  arr[2] = temp1
+  arr
 end
 
 
-num= ["12", "4", "35"]
+def adv_swap_elements(arr, index, index_des)
+  temp1 = arr[index]
+  temp2 = arr[index_des]
+  arr[index] = temp2
+  arr[index_des] = temp1
+  arr
+end
 
-def reverse_array(num)
-  num.reverse
-end  
+
+def reverse_array(arr)
+  arr.reverse
+end
+
+
+
+def kesha_maker(arr)
+  new_arr = []
+  arr.each do |str|
+    str[2] = "$"
+    new_arr << str
+  end
+end
+
+def find_a(arr)
+  arr.select {|str| str.start_with?("a")}
+end
+
+def sum_array(arr)
+  arr.inject {|sum, num| sum + num}
+end
+
+def add_s(arr)
+  arr.each {|str| str << "s" unless str == arr[1]}
+end
